@@ -1,0 +1,1094 @@
+[
+  {
+    "Rules": [
+      {
+        "ID": "00000000-0000-0000-0000-000000000000",
+        "Title": "Furnishing_against_Wall",
+        "Description": "Furnishing must have wall directly behind them",
+        "ErrorLevel": 2,
+        "ExistentialClauses": [
+          {
+            "OccuranceRule": 0,
+            "Characteristic": {
+              "IfcType": 1,
+              "PropertyChecks": []
+            }
+          },
+          {
+            "OccuranceRule": 1,
+            "Characteristic": {
+              "IfcType": 0,
+              "PropertyChecks": []
+            }
+          }
+        ],
+        "LogicalExpression": {
+          "ObjectChecks": [],
+          "RelationChecks": [
+            {
+              "Obj1Index": 0,
+              "Obj2Index": 1,
+              "Negation": 0,
+              "PropertyCheck": {
+                "$type": "RulesPackage.PropertyCheckNum, RulesPackage",
+                "Operation": 2,
+                "Value": 0.0,
+                "ValueInStandardUnit": 0.0,
+                "ValueUnit": 3,
+                "Name": "BackCenterDistanceTo"
+              }
+            }
+          ],
+          "LogicalExpressions": [],
+          "LogicalOperator": 0
+        }
+      },
+      {
+        "ID": "00000000-0000-0000-0000-000000000000",
+        "Title": "Cornercabinet",
+        "Description": "Corner cabinets must be by a corner",
+        "ErrorLevel": 2,
+        "ExistentialClauses": [
+          {
+            "OccuranceRule": 0,
+            "Characteristic": {
+              "IfcType": 1,
+              "PropertyChecks": [
+                {
+                  "$type": "RulesPackage.PropertyCheckString, RulesPackage",
+                  "Value": "Cornercabinet",
+                  "Operation": 2,
+                  "Name": "FunctionOfObj"
+                }
+              ]
+            }
+          },
+          {
+            "OccuranceRule": 1,
+            "Characteristic": {
+              "IfcType": 0,
+              "PropertyChecks": []
+            }
+          }
+        ],
+        "LogicalExpression": {
+          "ObjectChecks": [],
+          "RelationChecks": [
+            {
+              "Obj1Index": 0,
+              "Obj2Index": 1,
+              "Negation": 0,
+              "PropertyCheck": {
+                "$type": "RulesPackage.PropertyCheckNum, RulesPackage",
+                "Operation": 2,
+                "Value": 0.0,
+                "ValueInStandardUnit": 0.0,
+                "ValueUnit": 3,
+                "Name": "RightCenterDistanceTo"
+              }
+            }
+          ],
+          "LogicalExpressions": [],
+          "LogicalOperator": 0
+        }
+      },
+      {
+        "ID": "00000000-0000-0000-0000-000000000000",
+        "Title": "Triangle_Rule1",
+        "Description": "Distance between sink firdge stove must be between 4 and 9 feet.",
+        "ErrorLevel": 2,
+        "ExistentialClauses": [
+          {
+            "OccuranceRule": 1,
+            "Characteristic": {
+              "IfcType": 25,
+              "PropertyChecks": []
+            }
+          }
+        ],
+        "LogicalExpression": {
+          "ObjectChecks": [
+            {
+              "ObjIndex": 0,
+              "Negation": 0,
+              "PropertyCheck": {
+                "$type": "RulesPackage.PropertyCheckNum, RulesPackage",
+                "Operation": 1,
+                "Value": 4.0,
+                "ValueInStandardUnit": 1.2192000150680542,
+                "ValueUnit": 4,
+                "Name": "MinEdgeLength"
+              }
+            },
+            {
+              "ObjIndex": 0,
+              "Negation": 0,
+              "PropertyCheck": {
+                "$type": "RulesPackage.PropertyCheckNum, RulesPackage",
+                "Operation": 4,
+                "Value": 9.0,
+                "ValueInStandardUnit": 2.7432000339031219,
+                "ValueUnit": 4,
+                "Name": "MaxEdgeLength"
+              }
+            }
+          ],
+          "RelationChecks": [],
+          "LogicalExpressions": [],
+          "LogicalOperator": 0
+        }
+      },
+      {
+        "ID": "00000000-0000-0000-0000-000000000000",
+        "Title": "Sink_under_Window",
+        "Description": "Sink should be placed under a window",
+        "ErrorLevel": 2,
+        "ExistentialClauses": [
+          {
+            "OccuranceRule": 1,
+            "Characteristic": {
+              "IfcType": 1,
+              "PropertyChecks": [
+                {
+                  "$type": "RulesPackage.PropertyCheckString, RulesPackage",
+                  "Value": "Sink",
+                  "Operation": 0,
+                  "Name": "FunctionOfObj"
+                }
+              ]
+            }
+          },
+          {
+            "OccuranceRule": 1,
+            "Characteristic": {
+              "IfcType": 16,
+              "PropertyChecks": []
+            }
+          }
+        ],
+        "LogicalExpression": {
+          "ObjectChecks": [],
+          "RelationChecks": [
+            {
+              "Obj1Index": 0,
+              "Obj2Index": 1,
+              "Negation": 0,
+              "PropertyCheck": {
+                "$type": "RulesPackage.PropertyCheckNum, RulesPackage",
+                "Operation": 4,
+                "Value": 2.0,
+                "ValueInStandardUnit": 0.6096000075340271,
+                "ValueUnit": 4,
+                "Name": "CenterDistanceXY"
+              }
+            }
+          ],
+          "LogicalExpressions": [],
+          "LogicalOperator": 0
+        }
+      },
+      {
+        "ID": "00000000-0000-0000-0000-000000000000",
+        "Title": "Nothing_blocking_Furniture",
+        "Description": "Furniture (that have doors) should not have anything infront of it",
+        "ErrorLevel": 2,
+        "ExistentialClauses": [
+          {
+            "OccuranceRule": 0,
+            "Characteristic": {
+              "IfcType": 1,
+              "PropertyChecks": [
+                {
+                  "$type": "RulesPackage.PropertyCheckString, RulesPackage",
+                  "Value": "Cornercabinet",
+                  "Operation": 1,
+                  "Name": "FunctionOfObj"
+                }
+              ]
+            }
+          },
+          {
+            "OccuranceRule": 0,
+            "Characteristic": {
+              "IfcType": 14,
+              "PropertyChecks": []
+            }
+          }
+        ],
+        "LogicalExpression": {
+          "ObjectChecks": [],
+          "RelationChecks": [
+            {
+              "Obj1Index": 1,
+              "Obj2Index": 0,
+              "Negation": 0,
+              "PropertyCheck": {
+                "$type": "RulesPackage.PropertyCheckBool, RulesPackage",
+                "Value": false,
+                "Operation": 0,
+                "Name": "InFrontOf"
+              }
+            },
+            {
+              "Obj1Index": 0,
+              "Obj2Index": 1,
+              "Negation": 0,
+              "PropertyCheck": {
+                "$type": "RulesPackage.PropertyCheckNum, RulesPackage",
+                "Operation": 0,
+                "Value": 48.0,
+                "ValueInStandardUnit": 1.2191999852657318,
+                "ValueUnit": 3,
+                "Name": "BoundingBoxDistance"
+              }
+            }
+          ],
+          "LogicalExpressions": [],
+          "LogicalOperator": 1
+        }
+      },
+      {
+        "ID": "00000000-0000-0000-0000-000000000000",
+        "Title": "Sink_Counterspace",
+        "Description": "A sink should be a minimum of 3” on one side and 18” on the other side.",
+        "ErrorLevel": 2,
+        "ExistentialClauses": [
+          {
+            "OccuranceRule": 0,
+            "Characteristic": {
+              "IfcType": 1,
+              "PropertyChecks": [
+                {
+                  "$type": "RulesPackage.PropertyCheckString, RulesPackage",
+                  "Value": "Sink",
+                  "Operation": 0,
+                  "Name": "FunctionOfObj"
+                }
+              ]
+            }
+          },
+          {
+            "OccuranceRule": 1,
+            "Characteristic": {
+              "IfcType": 24,
+              "PropertyChecks": []
+            }
+          },
+          {
+            "OccuranceRule": 1,
+            "Characteristic": {
+              "IfcType": 24,
+              "PropertyChecks": []
+            }
+          }
+        ],
+        "LogicalExpression": {
+          "ObjectChecks": [
+            {
+              "ObjIndex": 1,
+              "Negation": 0,
+              "PropertyCheck": {
+                "$type": "RulesPackage.PropertyCheckNum, RulesPackage",
+                "Operation": 1,
+                "Value": 3.0,
+                "ValueInStandardUnit": 0.076199999079108238,
+                "ValueUnit": 3,
+                "Name": "Width"
+              }
+            },
+            {
+              "ObjIndex": 2,
+              "Negation": 0,
+              "PropertyCheck": {
+                "$type": "RulesPackage.PropertyCheckNum, RulesPackage",
+                "Operation": 1,
+                "Value": 18.0,
+                "ValueInStandardUnit": 0.45719999447464943,
+                "ValueUnit": 3,
+                "Name": "Width"
+              }
+            }
+          ],
+          "RelationChecks": [
+            {
+              "Obj1Index": 0,
+              "Obj2Index": 1,
+              "Negation": 0,
+              "PropertyCheck": {
+                "$type": "RulesPackage.PropertyCheckNum, RulesPackage",
+                "Operation": 4,
+                "Value": 1.0,
+                "ValueInStandardUnit": 0.30480000376701355,
+                "ValueUnit": 4,
+                "Name": "BoundingBoxDistance"
+              }
+            },
+            {
+              "Obj1Index": 0,
+              "Obj2Index": 2,
+              "Negation": 0,
+              "PropertyCheck": {
+                "$type": "RulesPackage.PropertyCheckNum, RulesPackage",
+                "Operation": 4,
+                "Value": 1.0,
+                "ValueInStandardUnit": 0.30480000376701355,
+                "ValueUnit": 4,
+                "Name": "BoundingBoxDistance"
+              }
+            },
+            {
+              "Obj1Index": 1,
+              "Obj2Index": 0,
+              "Negation": 0,
+              "PropertyCheck": {
+                "$type": "RulesPackage.PropertyCheckBool, RulesPackage",
+                "Value": true,
+                "Operation": 0,
+                "Name": "IsNextTo"
+              }
+            },
+            {
+              "Obj1Index": 2,
+              "Obj2Index": 0,
+              "Negation": 0,
+              "PropertyCheck": {
+                "$type": "RulesPackage.PropertyCheckBool, RulesPackage",
+                "Value": true,
+                "Operation": 0,
+                "Name": "IsNextTo"
+              }
+            }
+          ],
+          "LogicalExpressions": [],
+          "LogicalOperator": 0
+        }
+      },
+      {
+        "ID": "00000000-0000-0000-0000-000000000000",
+        "Title": "Triangle_Rule2",
+        "Description": "The sum of all three sides of the triangle should be between 13 feet and 26 feet. (Distance is measured from the center front of the appliance)",
+        "ErrorLevel": 2,
+        "ExistentialClauses": [
+          {
+            "OccuranceRule": 1,
+            "Characteristic": {
+              "IfcType": 25,
+              "PropertyChecks": []
+            }
+          }
+        ],
+        "LogicalExpression": {
+          "ObjectChecks": [
+            {
+              "ObjIndex": 0,
+              "Negation": 0,
+              "PropertyCheck": {
+                "$type": "RulesPackage.PropertyCheckNum, RulesPackage",
+                "Operation": 1,
+                "Value": 13.0,
+                "ValueInStandardUnit": 3.9624000489711761,
+                "ValueUnit": 4,
+                "Name": "TotalEdgeLength"
+              }
+            },
+            {
+              "ObjIndex": 0,
+              "Negation": 0,
+              "PropertyCheck": {
+                "$type": "RulesPackage.PropertyCheckNum, RulesPackage",
+                "Operation": 4,
+                "Value": 26.0,
+                "ValueInStandardUnit": 7.9248000979423523,
+                "ValueUnit": 4,
+                "Name": "TotalEdgeLength"
+              }
+            }
+          ],
+          "RelationChecks": [],
+          "LogicalExpressions": [],
+          "LogicalOperator": 0
+        }
+      },
+      {
+        "ID": "00000000-0000-0000-0000-000000000000",
+        "Title": "Range_away_from_Window",
+        "Description": "Range Can’t be placed under a window and should be 12” away from a window.",
+        "ErrorLevel": 2,
+        "ExistentialClauses": [
+          {
+            "OccuranceRule": 0,
+            "Characteristic": {
+              "IfcType": 1,
+              "PropertyChecks": [
+                {
+                  "$type": "RulesPackage.PropertyCheckString, RulesPackage",
+                  "Value": "Range",
+                  "Operation": 0,
+                  "Name": "FunctionOfObj"
+                }
+              ]
+            }
+          },
+          {
+            "OccuranceRule": 0,
+            "Characteristic": {
+              "IfcType": 16,
+              "PropertyChecks": []
+            }
+          }
+        ],
+        "LogicalExpression": {
+          "ObjectChecks": [],
+          "RelationChecks": [
+            {
+              "Obj1Index": 0,
+              "Obj2Index": 1,
+              "Negation": 0,
+              "PropertyCheck": {
+                "$type": "RulesPackage.PropertyCheckNum, RulesPackage",
+                "Operation": 0,
+                "Value": 3.0,
+                "ValueInStandardUnit": 0.91440001130104065,
+                "ValueUnit": 4,
+                "Name": "CenterDistanceXY"
+              }
+            }
+          ],
+          "LogicalExpressions": [],
+          "LogicalOperator": 0
+        }
+      },
+      {
+        "ID": "00000000-0000-0000-0000-000000000000",
+        "Title": "Refigerator_Counterspace",
+        "Description": "Refrigerator 16” of counter space on one side of the refrigerator",
+        "ErrorLevel": 2,
+        "ExistentialClauses": [
+          {
+            "OccuranceRule": 0,
+            "Characteristic": {
+              "IfcType": 1,
+              "PropertyChecks": [
+                {
+                  "$type": "RulesPackage.PropertyCheckString, RulesPackage",
+                  "Value": "Refrigerator",
+                  "Operation": 0,
+                  "Name": "FunctionOfObj"
+                }
+              ]
+            }
+          },
+          {
+            "OccuranceRule": 1,
+            "Characteristic": {
+              "IfcType": 24,
+              "PropertyChecks": []
+            }
+          }
+        ],
+        "LogicalExpression": {
+          "ObjectChecks": [
+            {
+              "ObjIndex": 1,
+              "Negation": 0,
+              "PropertyCheck": {
+                "$type": "RulesPackage.PropertyCheckNum, RulesPackage",
+                "Operation": 1,
+                "Value": 16.0,
+                "ValueInStandardUnit": 0.40639999508857727,
+                "ValueUnit": 3,
+                "Name": "Width"
+              }
+            }
+          ],
+          "RelationChecks": [
+            {
+              "Obj1Index": 0,
+              "Obj2Index": 1,
+              "Negation": 0,
+              "PropertyCheck": {
+                "$type": "RulesPackage.PropertyCheckNum, RulesPackage",
+                "Operation": 4,
+                "Value": 1.0,
+                "ValueInStandardUnit": 0.30480000376701355,
+                "ValueUnit": 4,
+                "Name": "BoundingBoxDistance"
+              }
+            },
+            {
+              "Obj1Index": 1,
+              "Obj2Index": 0,
+              "Negation": 0,
+              "PropertyCheck": {
+                "$type": "RulesPackage.PropertyCheckBool, RulesPackage",
+                "Value": true,
+                "Operation": 0,
+                "Name": "IsNextTo"
+              }
+            }
+          ],
+          "LogicalExpressions": [],
+          "LogicalOperator": 0
+        }
+      },
+      {
+        "ID": "00000000-0000-0000-0000-000000000000",
+        "Title": "Range_Counterspace",
+        "Description": "Range 15” of counter on one side of range, if not possible than a landing area directly across but not more than 48” is acceptable.",
+        "ErrorLevel": 2,
+        "ExistentialClauses": [
+          {
+            "OccuranceRule": 0,
+            "Characteristic": {
+              "IfcType": 1,
+              "PropertyChecks": [
+                {
+                  "$type": "RulesPackage.PropertyCheckString, RulesPackage",
+                  "Value": "Range",
+                  "Operation": 0,
+                  "Name": "FunctionOfObj"
+                }
+              ]
+            }
+          },
+          {
+            "OccuranceRule": 1,
+            "Characteristic": {
+              "IfcType": 24,
+              "PropertyChecks": []
+            }
+          }
+        ],
+        "LogicalExpression": {
+          "ObjectChecks": [
+            {
+              "ObjIndex": 1,
+              "Negation": 0,
+              "PropertyCheck": {
+                "$type": "RulesPackage.PropertyCheckNum, RulesPackage",
+                "Operation": 1,
+                "Value": 15.0,
+                "ValueInStandardUnit": 0.38099999539554119,
+                "ValueUnit": 3,
+                "Name": "Width"
+              }
+            }
+          ],
+          "RelationChecks": [
+            {
+              "Obj1Index": 1,
+              "Obj2Index": 0,
+              "Negation": 0,
+              "PropertyCheck": {
+                "$type": "RulesPackage.PropertyCheckBool, RulesPackage",
+                "Value": true,
+                "Operation": 0,
+                "Name": "IsNextTo"
+              }
+            },
+            {
+              "Obj1Index": 0,
+              "Obj2Index": 1,
+              "Negation": 0,
+              "PropertyCheck": {
+                "$type": "RulesPackage.PropertyCheckNum, RulesPackage",
+                "Operation": 4,
+                "Value": 1.0,
+                "ValueInStandardUnit": 0.30480000376701355,
+                "ValueUnit": 4,
+                "Name": "BoundingBoxDistance"
+              }
+            }
+          ],
+          "LogicalExpressions": [],
+          "LogicalOperator": 0
+        }
+      }
+    ],
+    "Name": "KitchenDesign Ruleset",
+    "ID": "c813a2f9-aaff-4b75-a4dd-d6170e04b93b",
+    "Description": "RuleSet for Kitchen Design"
+  },
+  {
+    "Rules": [
+      {
+        "ID": "00000000-0000-0000-0000-000000000000",
+        "Title": "Sink_Fridge_dist",
+        "Description": "",
+        "ErrorLevel": 2,
+        "ExistentialClauses": [
+          {
+            "OccuranceRule": 0,
+            "Characteristic": {
+              "IfcType": 1,
+              "PropertyChecks": [
+                {
+                  "$type": "RulesPackage.PropertyCheckString, RulesPackage",
+                  "Value": "Sink",
+                  "Operation": 0,
+                  "Name": "FunctionOfObj"
+                }
+              ]
+            }
+          },
+          {
+            "OccuranceRule": 0,
+            "Characteristic": {
+              "IfcType": 1,
+              "PropertyChecks": [
+                {
+                  "$type": "RulesPackage.PropertyCheckString, RulesPackage",
+                  "Value": "Refrigerator",
+                  "Operation": 0,
+                  "Name": "FunctionOfObj"
+                }
+              ]
+            }
+          }
+        ],
+        "LogicalExpression": {
+          "ObjectChecks": [],
+          "RelationChecks": [
+            {
+              "Obj1Index": 0,
+              "Obj2Index": 1,
+              "Negation": 0,
+              "PropertyCheck": {
+                "$type": "RulesPackage.PropertyCheckNum, RulesPackage",
+                "Operation": 1,
+                "Value": 4.0,
+                "ValueInStandardUnit": 1.2192000150680542,
+                "ValueUnit": 4,
+                "Name": "FrontCenterDistance"
+              }
+            },
+            {
+              "Obj1Index": 0,
+              "Obj2Index": 1,
+              "Negation": 0,
+              "PropertyCheck": {
+                "$type": "RulesPackage.PropertyCheckNum, RulesPackage",
+                "Operation": 4,
+                "Value": 9.0,
+                "ValueInStandardUnit": 2.7432000339031219,
+                "ValueUnit": 4,
+                "Name": "FrontCenterDistance"
+              }
+            }
+          ],
+          "LogicalExpressions": [],
+          "LogicalOperator": 0
+        }
+      },
+      {
+        "ID": "00000000-0000-0000-0000-000000000000",
+        "Title": "Sink_Range_dist",
+        "Description": "",
+        "ErrorLevel": 2,
+        "ExistentialClauses": [
+          {
+            "OccuranceRule": 0,
+            "Characteristic": {
+              "IfcType": 1,
+              "PropertyChecks": [
+                {
+                  "$type": "RulesPackage.PropertyCheckString, RulesPackage",
+                  "Value": "Sink",
+                  "Operation": 0,
+                  "Name": "FunctionOfObj"
+                }
+              ]
+            }
+          },
+          {
+            "OccuranceRule": 0,
+            "Characteristic": {
+              "IfcType": 1,
+              "PropertyChecks": [
+                {
+                  "$type": "RulesPackage.PropertyCheckString, RulesPackage",
+                  "Value": "Range",
+                  "Operation": 0,
+                  "Name": "FunctionOfObj"
+                }
+              ]
+            }
+          }
+        ],
+        "LogicalExpression": {
+          "ObjectChecks": [],
+          "RelationChecks": [
+            {
+              "Obj1Index": 0,
+              "Obj2Index": 1,
+              "Negation": 0,
+              "PropertyCheck": {
+                "$type": "RulesPackage.PropertyCheckNum, RulesPackage",
+                "Operation": 4,
+                "Value": 9.0,
+                "ValueInStandardUnit": 2.7432000339031219,
+                "ValueUnit": 4,
+                "Name": "FrontCenterDistance"
+              }
+            },
+            {
+              "Obj1Index": 0,
+              "Obj2Index": 1,
+              "Negation": 0,
+              "PropertyCheck": {
+                "$type": "RulesPackage.PropertyCheckNum, RulesPackage",
+                "Operation": 1,
+                "Value": 4.0,
+                "ValueInStandardUnit": 1.2192000150680542,
+                "ValueUnit": 4,
+                "Name": "FrontCenterDistance"
+              }
+            }
+          ],
+          "LogicalExpressions": [],
+          "LogicalOperator": 0
+        }
+      },
+      {
+        "ID": "00000000-0000-0000-0000-000000000000",
+        "Title": "Fridge_Range_dist",
+        "Description": "",
+        "ErrorLevel": 2,
+        "ExistentialClauses": [
+          {
+            "OccuranceRule": 0,
+            "Characteristic": {
+              "IfcType": 1,
+              "PropertyChecks": [
+                {
+                  "$type": "RulesPackage.PropertyCheckString, RulesPackage",
+                  "Value": "Range",
+                  "Operation": 0,
+                  "Name": "FunctionOfObj"
+                }
+              ]
+            }
+          },
+          {
+            "OccuranceRule": 0,
+            "Characteristic": {
+              "IfcType": 1,
+              "PropertyChecks": [
+                {
+                  "$type": "RulesPackage.PropertyCheckString, RulesPackage",
+                  "Value": "Refrigerator",
+                  "Operation": 0,
+                  "Name": "FunctionOfObj"
+                }
+              ]
+            }
+          }
+        ],
+        "LogicalExpression": {
+          "ObjectChecks": [],
+          "RelationChecks": [
+            {
+              "Obj1Index": 0,
+              "Obj2Index": 1,
+              "Negation": 0,
+              "PropertyCheck": {
+                "$type": "RulesPackage.PropertyCheckNum, RulesPackage",
+                "Operation": 1,
+                "Value": 4.0,
+                "ValueInStandardUnit": 1.2192000150680542,
+                "ValueUnit": 4,
+                "Name": "FrontCenterDistance"
+              }
+            },
+            {
+              "Obj1Index": 0,
+              "Obj2Index": 1,
+              "Negation": 0,
+              "PropertyCheck": {
+                "$type": "RulesPackage.PropertyCheckNum, RulesPackage",
+                "Operation": 4,
+                "Value": 9.0,
+                "ValueInStandardUnit": 2.7432000339031219,
+                "ValueUnit": 4,
+                "Name": "FrontCenterDistance"
+              }
+            }
+          ],
+          "LogicalExpressions": [],
+          "LogicalOperator": 0
+        }
+      },
+      {
+        "ID": "00000000-0000-0000-0000-000000000000",
+        "Title": "Cabinet_near_something",
+        "Description": "Cabinet must against something",
+        "ErrorLevel": 2,
+        "ExistentialClauses": [
+          {
+            "OccuranceRule": 0,
+            "Characteristic": {
+              "IfcType": 1,
+              "PropertyChecks": [
+                {
+                  "$type": "RulesPackage.PropertyCheckString, RulesPackage",
+                  "Value": "Cabinet",
+                  "Operation": 0,
+                  "Name": "FunctionOfObj"
+                }
+              ]
+            }
+          },
+          {
+            "OccuranceRule": 1,
+            "Characteristic": {
+              "IfcType": 1,
+              "PropertyChecks": []
+            }
+          }
+        ],
+        "LogicalExpression": {
+          "ObjectChecks": [],
+          "RelationChecks": [
+            {
+              "Obj1Index": 0,
+              "Obj2Index": 1,
+              "Negation": 0,
+              "PropertyCheck": {
+                "$type": "RulesPackage.PropertyCheckNum, RulesPackage",
+                "Operation": 4,
+                "Value": 2.0,
+                "ValueInStandardUnit": 0.050799999386072159,
+                "ValueUnit": 3,
+                "Name": "BoundingBoxDistance"
+              }
+            }
+          ],
+          "LogicalExpressions": [],
+          "LogicalOperator": 0
+        }
+      }
+    ],
+    "Name": "Extra Kitchen Rules",
+    "ID": "b609254f-a1df-4499-989c-c63431a0ebda",
+    "Description": ""
+  },
+  {
+    "Rules": [
+      {
+        "ID": "00000000-0000-0000-0000-000000000000",
+        "Title": "Overlap",
+        "Description": "No objects should Overlap.",
+        "ErrorLevel": 2,
+        "ExistentialClauses": [
+          {
+            "OccuranceRule": 0,
+            "Characteristic": {
+              "IfcType": 14,
+              "PropertyChecks": []
+            }
+          },
+          {
+            "OccuranceRule": 0,
+            "Characteristic": {
+              "IfcType": 14,
+              "PropertyChecks": []
+            }
+          }
+        ],
+        "LogicalExpression": {
+          "ObjectChecks": [],
+          "RelationChecks": [
+            {
+              "Obj1Index": 0,
+              "Obj2Index": 1,
+              "Negation": 0,
+              "PropertyCheck": {
+                "$type": "RulesPackage.PropertyCheckBool, RulesPackage",
+                "Value": false,
+                "Operation": 0,
+                "Name": "MeshOverlap"
+              }
+            }
+          ],
+          "LogicalExpressions": [],
+          "LogicalOperator": 0
+        }
+      },
+      {
+        "ID": "00000000-0000-0000-0000-000000000000",
+        "Title": "Nothing_blocking_Door",
+        "Description": "",
+        "ErrorLevel": 2,
+        "ExistentialClauses": [
+          {
+            "OccuranceRule": 0,
+            "Characteristic": {
+              "IfcType": 15,
+              "PropertyChecks": []
+            }
+          },
+          {
+            "OccuranceRule": 0,
+            "Characteristic": {
+              "IfcType": 1,
+              "PropertyChecks": []
+            }
+          }
+        ],
+        "LogicalExpression": {
+          "ObjectChecks": [],
+          "RelationChecks": [
+            {
+              "Obj1Index": 0,
+              "Obj2Index": 1,
+              "Negation": 0,
+              "PropertyCheck": {
+                "$type": "RulesPackage.PropertyCheckNum, RulesPackage",
+                "Operation": 0,
+                "Value": 60.0,
+                "ValueInStandardUnit": 1.5239999815821648,
+                "ValueUnit": 3,
+                "Name": "BoundingBoxDistance"
+              }
+            }
+          ],
+          "LogicalExpressions": [
+            {
+              "ObjectChecks": [],
+              "RelationChecks": [
+                {
+                  "Obj1Index": 1,
+                  "Obj2Index": 0,
+                  "Negation": 0,
+                  "PropertyCheck": {
+                    "$type": "RulesPackage.PropertyCheckBool, RulesPackage",
+                    "Value": false,
+                    "Operation": 0,
+                    "Name": "InFrontOf"
+                  }
+                },
+                {
+                  "Obj1Index": 1,
+                  "Obj2Index": 0,
+                  "Negation": 0,
+                  "PropertyCheck": {
+                    "$type": "RulesPackage.PropertyCheckBool, RulesPackage",
+                    "Value": false,
+                    "Operation": 0,
+                    "Name": "IsBehind"
+                  }
+                }
+              ],
+              "LogicalExpressions": [],
+              "LogicalOperator": 0
+            }
+          ],
+          "LogicalOperator": 1
+        }
+      },
+      {
+        "ID": "00000000-0000-0000-0000-000000000000",
+        "Title": "Nothing_blocking_Windows",
+        "Description": "Window must not have anything blocking it",
+        "ErrorLevel": 2,
+        "ExistentialClauses": [
+          {
+            "OccuranceRule": 0,
+            "Characteristic": {
+              "IfcType": 1,
+              "PropertyChecks": [
+                {
+                  "$type": "RulesPackage.PropertyCheckString, RulesPackage",
+                  "Value": "Sink",
+                  "Operation": 1,
+                  "Name": "FunctionOfObj"
+                }
+              ]
+            }
+          },
+          {
+            "OccuranceRule": 0,
+            "Characteristic": {
+              "IfcType": 16,
+              "PropertyChecks": []
+            }
+          }
+        ],
+        "LogicalExpression": {
+          "ObjectChecks": [],
+          "RelationChecks": [
+            {
+              "Obj1Index": 1,
+              "Obj2Index": 0,
+              "Negation": 0,
+              "PropertyCheck": {
+                "$type": "RulesPackage.PropertyCheckBool, RulesPackage",
+                "Value": false,
+                "Operation": 0,
+                "Name": "IsBehind"
+              }
+            },
+            {
+              "Obj1Index": 0,
+              "Obj2Index": 1,
+              "Negation": 0,
+              "PropertyCheck": {
+                "$type": "RulesPackage.PropertyCheckNum, RulesPackage",
+                "Operation": 1,
+                "Value": 4.0,
+                "ValueInStandardUnit": 1.2192000150680542,
+                "ValueUnit": 4,
+                "Name": "BoundingBoxDistance"
+              }
+            }
+          ],
+          "LogicalExpressions": [],
+          "LogicalOperator": 1
+        }
+      },
+      {
+        "ID": "ec9aff71-95b1-4f1b-bde1-a3f28ee4b6bf",
+        "Title": "Over_Floor",
+        "Description": "",
+        "ErrorLevel": 2,
+        "ExistentialClauses": [
+          {
+            "OccuranceRule": 0,
+            "Characteristic": {
+              "IfcType": 1,
+              "PropertyChecks": []
+            }
+          },
+          {
+            "OccuranceRule": 1,
+            "Characteristic": {
+              "IfcType": 27,
+              "PropertyChecks": []
+            }
+          }
+        ],
+        "LogicalExpression": {
+          "ObjectChecks": [],
+          "RelationChecks": [
+            {
+              "Obj1Index": 0,
+              "Obj2Index": 1,
+              "Negation": 0,
+              "PropertyCheck": {
+                "$type": "RulesPackage.PropertyCheckBool, RulesPackage",
+                "Value": true,
+                "Operation": 0,
+                "Name": "IsAbove"
+              }
+            }
+          ],
+          "LogicalExpressions": [],
+          "LogicalOperator": 0
+        }
+      }
+    ],
+    "Name": "Generic Rules",
+    "ID": "d34e8bf4-ac0f-4169-bf42-c52ecc59222e",
+    "Description": ""
+  }
+]

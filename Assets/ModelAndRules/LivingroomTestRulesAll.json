@@ -1,0 +1,1120 @@
+[
+  {
+    "Rules": [
+      {
+        "ID": "00000000-0000-0000-0000-000000000000",
+        "Title": "Clearance_Couch",
+        "Description": "Couch 30\u0022 clearance infront",
+        "ErrorLevel": 2,
+        "ExistentialClauses": [
+          {
+            "OccuranceRule": 0,
+            "Characteristic": {
+              "IfcType": 1,
+              "PropertyChecks": [
+                {
+                  "$type": "RulesPackage.PropertyCheckString, RulesPackage",
+                  "Value": "Couch",
+                  "Operation": 0,
+                  "Name": "FunctionOfObj"
+                }
+              ]
+            }
+          },
+          {
+            "OccuranceRule": 0,
+            "Characteristic": {
+              "IfcType": 14,
+              "PropertyChecks": [
+                {
+                  "$type": "RulesPackage.PropertyCheckString, RulesPackage",
+                  "Value": "CoffeeTable",
+                  "Operation": 1,
+                  "Name": "FunctionOfObj"
+                }
+              ]
+            }
+          }
+        ],
+        "LogicalExpression": {
+          "ObjectChecks": [],
+          "RelationChecks": [
+            {
+              "Obj1Index": 1,
+              "Obj2Index": 0,
+              "Negation": 0,
+              "PropertyCheck": {
+                "$type": "RulesPackage.PropertyCheckBool, RulesPackage",
+                "Value": false,
+                "Operation": 0,
+                "Name": "InFrontOf"
+              }
+            },
+            {
+              "Obj1Index": 0,
+              "Obj2Index": 1,
+              "Negation": 0,
+              "PropertyCheck": {
+                "$type": "RulesPackage.PropertyCheckNum, RulesPackage",
+                "Operation": 0,
+                "Value": 30.0,
+                "ValueInStandardUnit": 0.76199999079108238,
+                "ValueUnit": 3,
+                "Name": "BoundingBoxDistance"
+              }
+            }
+          ],
+          "LogicalExpressions": [],
+          "LogicalOperator": 1
+        }
+      },
+      {
+        "ID": "00000000-0000-0000-0000-000000000000",
+        "Title": "Clearance_Shelving",
+        "Description": "Shelf 24\u0022 clearance infront",
+        "ErrorLevel": 2,
+        "ExistentialClauses": [
+          {
+            "OccuranceRule": 0,
+            "Characteristic": {
+              "IfcType": 1,
+              "PropertyChecks": [
+                {
+                  "$type": "RulesPackage.PropertyCheckString, RulesPackage",
+                  "Value": "Shelf",
+                  "Operation": 0,
+                  "Name": "FunctionOfObj"
+                }
+              ]
+            }
+          },
+          {
+            "OccuranceRule": 0,
+            "Characteristic": {
+              "IfcType": 14,
+              "PropertyChecks": []
+            }
+          }
+        ],
+        "LogicalExpression": {
+          "ObjectChecks": [],
+          "RelationChecks": [
+            {
+              "Obj1Index": 1,
+              "Obj2Index": 0,
+              "Negation": 0,
+              "PropertyCheck": {
+                "$type": "RulesPackage.PropertyCheckBool, RulesPackage",
+                "Value": false,
+                "Operation": 0,
+                "Name": "InFrontOf"
+              }
+            },
+            {
+              "Obj1Index": 0,
+              "Obj2Index": 1,
+              "Negation": 0,
+              "PropertyCheck": {
+                "$type": "RulesPackage.PropertyCheckNum, RulesPackage",
+                "Operation": 0,
+                "Value": 24.0,
+                "ValueInStandardUnit": 0.60959999263286591,
+                "ValueUnit": 3,
+                "Name": "BoundingBoxDistance"
+              }
+            }
+          ],
+          "LogicalExpressions": [],
+          "LogicalOperator": 1
+        }
+      },
+      {
+        "ID": "00000000-0000-0000-0000-000000000000",
+        "Title": "Pariwise_Coffee_table_to_Couch_Dist",
+        "Description": "Coffee table 16-18\u0022 infront of couch",
+        "ErrorLevel": 2,
+        "ExistentialClauses": [
+          {
+            "OccuranceRule": 0,
+            "Characteristic": {
+              "IfcType": 1,
+              "PropertyChecks": [
+                {
+                  "$type": "RulesPackage.PropertyCheckString, RulesPackage",
+                  "Value": "CoffeeTable",
+                  "Operation": 0,
+                  "Name": "FunctionOfObj"
+                }
+              ]
+            }
+          },
+          {
+            "OccuranceRule": 0,
+            "Characteristic": {
+              "IfcType": 1,
+              "PropertyChecks": [
+                {
+                  "$type": "RulesPackage.PropertyCheckString, RulesPackage",
+                  "Value": "Couch",
+                  "Operation": 0,
+                  "Name": "FunctionOfObj"
+                }
+              ]
+            }
+          }
+        ],
+        "LogicalExpression": {
+          "ObjectChecks": [],
+          "RelationChecks": [
+            {
+              "Obj1Index": 0,
+              "Obj2Index": 1,
+              "Negation": 0,
+              "PropertyCheck": {
+                "$type": "RulesPackage.PropertyCheckBool, RulesPackage",
+                "Value": true,
+                "Operation": 0,
+                "Name": "InFrontOf"
+              }
+            },
+            {
+              "Obj1Index": 0,
+              "Obj2Index": 1,
+              "Negation": 0,
+              "PropertyCheck": {
+                "$type": "RulesPackage.PropertyCheckNum, RulesPackage",
+                "Operation": 4,
+                "Value": 18.0,
+                "ValueInStandardUnit": 0.45719999447464943,
+                "ValueUnit": 3,
+                "Name": "BoundingBoxDistance"
+              }
+            },
+            {
+              "Obj1Index": 0,
+              "Obj2Index": 1,
+              "Negation": 0,
+              "PropertyCheck": {
+                "$type": "RulesPackage.PropertyCheckNum, RulesPackage",
+                "Operation": 1,
+                "Value": 16.0,
+                "ValueInStandardUnit": 0.40639999508857727,
+                "ValueUnit": 3,
+                "Name": "BoundingBoxDistance"
+              }
+            }
+          ],
+          "LogicalExpressions": [],
+          "LogicalOperator": 0
+        }
+      },
+      {
+        "ID": "00000000-0000-0000-0000-000000000000",
+        "Title": "Pariwise_End_table_to_Couch",
+        "Description": "End table 0-12\u0022 to back or side of couch",
+        "ErrorLevel": 2,
+        "ExistentialClauses": [
+          {
+            "OccuranceRule": 0,
+            "Characteristic": {
+              "IfcType": 1,
+              "PropertyChecks": [
+                {
+                  "$type": "RulesPackage.PropertyCheckString, RulesPackage",
+                  "Value": "EndTable",
+                  "Operation": 0,
+                  "Name": "FunctionOfObj"
+                }
+              ]
+            }
+          },
+          {
+            "OccuranceRule": 1,
+            "Characteristic": {
+              "IfcType": 1,
+              "PropertyChecks": [
+                {
+                  "$type": "RulesPackage.PropertyCheckString, RulesPackage",
+                  "Value": "Couch",
+                  "Operation": 0,
+                  "Name": "FunctionOfObj"
+                }
+              ]
+            }
+          }
+        ],
+        "LogicalExpression": {
+          "ObjectChecks": [],
+          "RelationChecks": [
+            {
+              "Obj1Index": 0,
+              "Obj2Index": 1,
+              "Negation": 0,
+              "PropertyCheck": {
+                "$type": "RulesPackage.PropertyCheckNum, RulesPackage",
+                "Operation": 1,
+                "Value": 0.0,
+                "ValueInStandardUnit": 0.0,
+                "ValueUnit": 3,
+                "Name": "BoundingBoxDistance"
+              }
+            },
+            {
+              "Obj1Index": 0,
+              "Obj2Index": 1,
+              "Negation": 0,
+              "PropertyCheck": {
+                "$type": "RulesPackage.PropertyCheckNum, RulesPackage",
+                "Operation": 4,
+                "Value": 12.0,
+                "ValueInStandardUnit": 0.30479999631643295,
+                "ValueUnit": 3,
+                "Name": "BoundingBoxDistance"
+              }
+            }
+          ],
+          "LogicalExpressions": [
+            {
+              "ObjectChecks": [],
+              "RelationChecks": [
+                {
+                  "Obj1Index": 0,
+                  "Obj2Index": 1,
+                  "Negation": 0,
+                  "PropertyCheck": {
+                    "$type": "RulesPackage.PropertyCheckBool, RulesPackage",
+                    "Value": true,
+                    "Operation": 0,
+                    "Name": "IsNextTo"
+                  }
+                },
+                {
+                  "Obj1Index": 0,
+                  "Obj2Index": 1,
+                  "Negation": 0,
+                  "PropertyCheck": {
+                    "$type": "RulesPackage.PropertyCheckBool, RulesPackage",
+                    "Value": true,
+                    "Operation": 0,
+                    "Name": "IsBehind"
+                  }
+                }
+              ],
+              "LogicalExpressions": [],
+              "LogicalOperator": 1
+            }
+          ],
+          "LogicalOperator": 0
+        }
+      },
+      {
+        "ID": "00000000-0000-0000-0000-000000000000",
+        "Title": "Coversation_Dist",
+        "Description": "Couch to couch distance must be 4-8 feet",
+        "ErrorLevel": 2,
+        "ExistentialClauses": [
+          {
+            "OccuranceRule": 0,
+            "Characteristic": {
+              "IfcType": 1,
+              "PropertyChecks": [
+                {
+                  "$type": "RulesPackage.PropertyCheckString, RulesPackage",
+                  "Value": "Couch",
+                  "Operation": 0,
+                  "Name": "FunctionOfObj"
+                }
+              ]
+            }
+          },
+          {
+            "OccuranceRule": 0,
+            "Characteristic": {
+              "IfcType": 1,
+              "PropertyChecks": [
+                {
+                  "$type": "RulesPackage.PropertyCheckString, RulesPackage",
+                  "Value": "Couch",
+                  "Operation": 0,
+                  "Name": "FunctionOfObj"
+                }
+              ]
+            }
+          }
+        ],
+        "LogicalExpression": {
+          "ObjectChecks": [],
+          "RelationChecks": [
+            {
+              "Obj1Index": 0,
+              "Obj2Index": 1,
+              "Negation": 0,
+              "PropertyCheck": {
+                "$type": "RulesPackage.PropertyCheckNum, RulesPackage",
+                "Operation": 1,
+                "Value": 4.0,
+                "ValueInStandardUnit": 1.2192000150680542,
+                "ValueUnit": 4,
+                "Name": "CenterDistanceXY"
+              }
+            },
+            {
+              "Obj1Index": 0,
+              "Obj2Index": 1,
+              "Negation": 0,
+              "PropertyCheck": {
+                "$type": "RulesPackage.PropertyCheckNum, RulesPackage",
+                "Operation": 4,
+                "Value": 8.0,
+                "ValueInStandardUnit": 2.4384000301361084,
+                "ValueUnit": 4,
+                "Name": "CenterDistanceXY"
+              }
+            }
+          ],
+          "LogicalExpressions": [],
+          "LogicalOperator": 0
+        }
+      },
+      {
+        "ID": "00000000-0000-0000-0000-000000000000",
+        "Title": "Alignment_Walls",
+        "Description": "Furniture should be aligned with nearby walls",
+        "ErrorLevel": 2,
+        "ExistentialClauses": [
+          {
+            "OccuranceRule": 0,
+            "Characteristic": {
+              "IfcType": 1,
+              "PropertyChecks": []
+            }
+          },
+          {
+            "OccuranceRule": 0,
+            "Characteristic": {
+              "IfcType": 0,
+              "PropertyChecks": []
+            }
+          }
+        ],
+        "LogicalExpression": {
+          "ObjectChecks": [],
+          "RelationChecks": [
+            {
+              "Obj1Index": 0,
+              "Obj2Index": 1,
+              "Negation": 0,
+              "PropertyCheck": {
+                "$type": "RulesPackage.PropertyCheckNum, RulesPackage",
+                "Operation": 2,
+                "Value": 90.0,
+                "ValueInStandardUnit": 1.5707963267948966,
+                "ValueUnit": 5,
+                "Name": "AlignmentAngle"
+              }
+            },
+            {
+              "Obj1Index": 0,
+              "Obj2Index": 1,
+              "Negation": 0,
+              "PropertyCheck": {
+                "$type": "RulesPackage.PropertyCheckNum, RulesPackage",
+                "Operation": 0,
+                "Value": 2.0,
+                "ValueInStandardUnit": 0.6096000075340271,
+                "ValueUnit": 4,
+                "Name": "BoundingBoxDistance"
+              }
+            }
+          ],
+          "LogicalExpressions": [],
+          "LogicalOperator": 1
+        }
+      },
+      {
+        "ID": "00000000-0000-0000-0000-000000000000",
+        "Title": "Alignment_furnishing",
+        "Description": "Furniture should be aligned with nearby Furniture",
+        "ErrorLevel": 2,
+        "ExistentialClauses": [
+          {
+            "OccuranceRule": 0,
+            "Characteristic": {
+              "IfcType": 1,
+              "PropertyChecks": []
+            }
+          },
+          {
+            "OccuranceRule": 0,
+            "Characteristic": {
+              "IfcType": 1,
+              "PropertyChecks": []
+            }
+          }
+        ],
+        "LogicalExpression": {
+          "ObjectChecks": [],
+          "RelationChecks": [
+            {
+              "Obj1Index": 0,
+              "Obj2Index": 1,
+              "Negation": 0,
+              "PropertyCheck": {
+                "$type": "RulesPackage.PropertyCheckNum, RulesPackage",
+                "Operation": 2,
+                "Value": 0.0,
+                "ValueInStandardUnit": 0.0,
+                "ValueUnit": 5,
+                "Name": "AlignmentAngle"
+              }
+            },
+            {
+              "Obj1Index": 0,
+              "Obj2Index": 1,
+              "Negation": 0,
+              "PropertyCheck": {
+                "$type": "RulesPackage.PropertyCheckNum, RulesPackage",
+                "Operation": 2,
+                "Value": 90.0,
+                "ValueInStandardUnit": 1.5707963267948966,
+                "ValueUnit": 5,
+                "Name": "AlignmentAngle"
+              }
+            },
+            {
+              "Obj1Index": 0,
+              "Obj2Index": 1,
+              "Negation": 0,
+              "PropertyCheck": {
+                "$type": "RulesPackage.PropertyCheckNum, RulesPackage",
+                "Operation": 2,
+                "Value": 180.0,
+                "ValueInStandardUnit": 3.1415926535897931,
+                "ValueUnit": 5,
+                "Name": "AlignmentAngle"
+              }
+            },
+            {
+              "Obj1Index": 0,
+              "Obj2Index": 1,
+              "Negation": 0,
+              "PropertyCheck": {
+                "$type": "RulesPackage.PropertyCheckNum, RulesPackage",
+                "Operation": 0,
+                "Value": 2.0,
+                "ValueInStandardUnit": 0.6096000075340271,
+                "ValueUnit": 4,
+                "Name": "BoundingBoxDistance"
+              }
+            }
+          ],
+          "LogicalExpressions": [],
+          "LogicalOperator": 1
+        }
+      },
+      {
+        "ID": "00000000-0000-0000-0000-000000000000",
+        "Title": "Parewise_Shelving_against_Wall",
+        "Description": "",
+        "ErrorLevel": 2,
+        "ExistentialClauses": [
+          {
+            "OccuranceRule": 0,
+            "Characteristic": {
+              "IfcType": 1,
+              "PropertyChecks": [
+                {
+                  "$type": "RulesPackage.PropertyCheckString, RulesPackage",
+                  "Value": "Shelf",
+                  "Operation": 0,
+                  "Name": "FunctionOfObj"
+                }
+              ]
+            }
+          },
+          {
+            "OccuranceRule": 1,
+            "Characteristic": {
+              "IfcType": 0,
+              "PropertyChecks": []
+            }
+          }
+        ],
+        "LogicalExpression": {
+          "ObjectChecks": [],
+          "RelationChecks": [
+            {
+              "Obj1Index": 1,
+              "Obj2Index": 0,
+              "Negation": 0,
+              "PropertyCheck": {
+                "$type": "RulesPackage.PropertyCheckBool, RulesPackage",
+                "Value": true,
+                "Operation": 0,
+                "Name": "IsBehind"
+              }
+            },
+            {
+              "Obj1Index": 0,
+              "Obj2Index": 1,
+              "Negation": 0,
+              "PropertyCheck": {
+                "$type": "RulesPackage.PropertyCheckNum, RulesPackage",
+                "Operation": 4,
+                "Value": 1.0,
+                "ValueInStandardUnit": 0.025399999693036079,
+                "ValueUnit": 3,
+                "Name": "BoundingBoxDistance"
+              }
+            }
+          ],
+          "LogicalExpressions": [],
+          "LogicalOperator": 0
+        }
+      },
+      {
+        "ID": "00000000-0000-0000-0000-000000000000",
+        "Title": "Pairwise_Plant_near_wall",
+        "Description": "",
+        "ErrorLevel": 2,
+        "ExistentialClauses": [
+          {
+            "OccuranceRule": 0,
+            "Characteristic": {
+              "IfcType": 1,
+              "PropertyChecks": [
+                {
+                  "$type": "RulesPackage.PropertyCheckString, RulesPackage",
+                  "Value": "Plant",
+                  "Operation": 0,
+                  "Name": "FunctionOfObj"
+                }
+              ]
+            }
+          },
+          {
+            "OccuranceRule": 1,
+            "Characteristic": {
+              "IfcType": 0,
+              "PropertyChecks": []
+            }
+          }
+        ],
+        "LogicalExpression": {
+          "ObjectChecks": [],
+          "RelationChecks": [
+            {
+              "Obj1Index": 0,
+              "Obj2Index": 1,
+              "Negation": 0,
+              "PropertyCheck": {
+                "$type": "RulesPackage.PropertyCheckNum, RulesPackage",
+                "Operation": 2,
+                "Value": 0.0,
+                "ValueInStandardUnit": 0.0,
+                "ValueUnit": 3,
+                "Name": "BoundingBoxDistance"
+              }
+            }
+          ],
+          "LogicalExpressions": [],
+          "LogicalOperator": 0
+        }
+      },
+      {
+        "ID": "00000000-0000-0000-0000-000000000000",
+        "Title": "Pariwise_Coffee_table_to_Couch_Angle",
+        "Description": "Coffee table  infront of couch",
+        "ErrorLevel": 0,
+        "ExistentialClauses": [
+          {
+            "OccuranceRule": 0,
+            "Characteristic": {
+              "IfcType": 1,
+              "PropertyChecks": [
+                {
+                  "$type": "RulesPackage.PropertyCheckString, RulesPackage",
+                  "Value": "CoffeeTable",
+                  "Operation": 0,
+                  "Name": "FunctionOfObj"
+                }
+              ]
+            }
+          },
+          {
+            "OccuranceRule": 0,
+            "Characteristic": {
+              "IfcType": 1,
+              "PropertyChecks": [
+                {
+                  "$type": "RulesPackage.PropertyCheckString, RulesPackage",
+                  "Value": "Couch",
+                  "Operation": 0,
+                  "Name": "FunctionOfObj"
+                }
+              ]
+            }
+          }
+        ],
+        "LogicalExpression": {
+          "ObjectChecks": [],
+          "RelationChecks": [
+            {
+              "Obj1Index": 1,
+              "Obj2Index": 0,
+              "Negation": 0,
+              "PropertyCheck": {
+                "$type": "RulesPackage.PropertyCheckNum, RulesPackage",
+                "Operation": 2,
+                "Value": 0.0,
+                "ValueInStandardUnit": 0.0,
+                "ValueUnit": 5,
+                "Name": "AngleBetweenForwardAndAngleTo"
+              }
+            }
+          ],
+          "LogicalExpressions": [],
+          "LogicalOperator": 0
+        }
+      },
+      {
+        "ID": "00000000-0000-0000-0000-000000000000",
+        "Title": "Coversation_Angle",
+        "Description": "Couch to couch angled towards eachother",
+        "ErrorLevel": 0,
+        "ExistentialClauses": [
+          {
+            "OccuranceRule": 0,
+            "Characteristic": {
+              "IfcType": 1,
+              "PropertyChecks": [
+                {
+                  "$type": "RulesPackage.PropertyCheckString, RulesPackage",
+                  "Value": "Couch",
+                  "Operation": 0,
+                  "Name": "FunctionOfObj"
+                }
+              ]
+            }
+          },
+          {
+            "OccuranceRule": 1,
+            "Characteristic": {
+              "IfcType": 1,
+              "PropertyChecks": [
+                {
+                  "$type": "RulesPackage.PropertyCheckString, RulesPackage",
+                  "Value": "Couch",
+                  "Operation": 0,
+                  "Name": "FunctionOfObj"
+                }
+              ]
+            }
+          }
+        ],
+        "LogicalExpression": {
+          "ObjectChecks": [],
+          "RelationChecks": [
+            {
+              "Obj1Index": 0,
+              "Obj2Index": 1,
+              "Negation": 0,
+              "PropertyCheck": {
+                "$type": "RulesPackage.PropertyCheckNum, RulesPackage",
+                "Operation": 2,
+                "Value": 0.0,
+                "ValueInStandardUnit": 0.0,
+                "ValueUnit": 5,
+                "Name": "AngleBetweenForwardAndAngleTo"
+              }
+            }
+          ],
+          "LogicalExpressions": [],
+          "LogicalOperator": 0
+        }
+      }
+    ],
+    "Name": "Livingroom rules",
+    "ID": "e7c619c9-746a-496b-bc4f-2eb509c7e8f8",
+    "Description": ""
+  },
+  {
+    "Rules": [
+      {
+        "ID": "00000000-0000-0000-0000-000000000000",
+        "Title": "Overlap",
+        "Description": "No objects should Overlap.",
+        "ErrorLevel": 2,
+        "ExistentialClauses": [
+          {
+            "OccuranceRule": 0,
+            "Characteristic": {
+              "IfcType": 14,
+              "PropertyChecks": []
+            }
+          },
+          {
+            "OccuranceRule": 0,
+            "Characteristic": {
+              "IfcType": 14,
+              "PropertyChecks": []
+            }
+          }
+        ],
+        "LogicalExpression": {
+          "ObjectChecks": [],
+          "RelationChecks": [
+            {
+              "Obj1Index": 0,
+              "Obj2Index": 1,
+              "Negation": 0,
+              "PropertyCheck": {
+                "$type": "RulesPackage.PropertyCheckBool, RulesPackage",
+                "Value": false,
+                "Operation": 0,
+                "Name": "MeshOverlap"
+              }
+            }
+          ],
+          "LogicalExpressions": [],
+          "LogicalOperator": 0
+        }
+      },
+      {
+        "ID": "00000000-0000-0000-0000-000000000000",
+        "Title": "Nothing_blocking_door",
+        "Description": "",
+        "ErrorLevel": 2,
+        "ExistentialClauses": [
+          {
+            "OccuranceRule": 0,
+            "Characteristic": {
+              "IfcType": 15,
+              "PropertyChecks": []
+            }
+          },
+          {
+            "OccuranceRule": 0,
+            "Characteristic": {
+              "IfcType": 1,
+              "PropertyChecks": []
+            }
+          }
+        ],
+        "LogicalExpression": {
+          "ObjectChecks": [],
+          "RelationChecks": [
+            {
+              "Obj1Index": 0,
+              "Obj2Index": 1,
+              "Negation": 0,
+              "PropertyCheck": {
+                "$type": "RulesPackage.PropertyCheckNum, RulesPackage",
+                "Operation": 0,
+                "Value": 60.0,
+                "ValueInStandardUnit": 1.5239999815821648,
+                "ValueUnit": 3,
+                "Name": "BoundingBoxDistance"
+              }
+            }
+          ],
+          "LogicalExpressions": [
+            {
+              "ObjectChecks": [],
+              "RelationChecks": [
+                {
+                  "Obj1Index": 1,
+                  "Obj2Index": 0,
+                  "Negation": 0,
+                  "PropertyCheck": {
+                    "$type": "RulesPackage.PropertyCheckBool, RulesPackage",
+                    "Value": false,
+                    "Operation": 0,
+                    "Name": "InFrontOf"
+                  }
+                },
+                {
+                  "Obj1Index": 1,
+                  "Obj2Index": 0,
+                  "Negation": 0,
+                  "PropertyCheck": {
+                    "$type": "RulesPackage.PropertyCheckBool, RulesPackage",
+                    "Value": false,
+                    "Operation": 0,
+                    "Name": "IsBehind"
+                  }
+                }
+              ],
+              "LogicalExpressions": [],
+              "LogicalOperator": 0
+            }
+          ],
+          "LogicalOperator": 1
+        }
+      },
+      {
+        "ID": "00000000-0000-0000-0000-000000000000",
+        "Title": "Nothing_blocking_windows",
+        "Description": "Window must not have anything blocking it",
+        "ErrorLevel": 2,
+        "ExistentialClauses": [
+          {
+            "OccuranceRule": 0,
+            "Characteristic": {
+              "IfcType": 1,
+              "PropertyChecks": [
+                {
+                  "$type": "RulesPackage.PropertyCheckString, RulesPackage",
+                  "Value": "Sink",
+                  "Operation": 1,
+                  "Name": "FunctionOfObj"
+                }
+              ]
+            }
+          },
+          {
+            "OccuranceRule": 0,
+            "Characteristic": {
+              "IfcType": 16,
+              "PropertyChecks": []
+            }
+          }
+        ],
+        "LogicalExpression": {
+          "ObjectChecks": [],
+          "RelationChecks": [
+            {
+              "Obj1Index": 1,
+              "Obj2Index": 0,
+              "Negation": 0,
+              "PropertyCheck": {
+                "$type": "RulesPackage.PropertyCheckBool, RulesPackage",
+                "Value": false,
+                "Operation": 0,
+                "Name": "IsBehind"
+              }
+            },
+            {
+              "Obj1Index": 0,
+              "Obj2Index": 1,
+              "Negation": 0,
+              "PropertyCheck": {
+                "$type": "RulesPackage.PropertyCheckNum, RulesPackage",
+                "Operation": 1,
+                "Value": 4.0,
+                "ValueInStandardUnit": 1.2192000150680542,
+                "ValueUnit": 4,
+                "Name": "BoundingBoxDistance"
+              }
+            }
+          ],
+          "LogicalExpressions": [],
+          "LogicalOperator": 1
+        }
+      }
+    ],
+    "Name": "Generic Rules",
+    "ID": "31756eef-259c-4fdc-8210-76a1e57ebd55",
+    "Description": ""
+  },
+  {
+    "Rules": [
+      {
+        "ID": "00000000-0000-0000-0000-000000000000",
+        "Title": "Clearance_Cabinets",
+        "Description": "Cabinet 24\u0022 clearance infront",
+        "ErrorLevel": 2,
+        "ExistentialClauses": [
+          {
+            "OccuranceRule": 0,
+            "Characteristic": {
+              "IfcType": 1,
+              "PropertyChecks": [
+                {
+                  "$type": "RulesPackage.PropertyCheckString, RulesPackage",
+                  "Value": "Cabinet",
+                  "Operation": 0,
+                  "Name": "FunctionOfObj"
+                }
+              ]
+            }
+          },
+          {
+            "OccuranceRule": 0,
+            "Characteristic": {
+              "IfcType": 14,
+              "PropertyChecks": []
+            }
+          }
+        ],
+        "LogicalExpression": {
+          "ObjectChecks": [],
+          "RelationChecks": [
+            {
+              "Obj1Index": 0,
+              "Obj2Index": 1,
+              "Negation": 0,
+              "PropertyCheck": {
+                "$type": "RulesPackage.PropertyCheckNum, RulesPackage",
+                "Operation": 0,
+                "Value": 24.0,
+                "ValueInStandardUnit": 0.60959999263286591,
+                "ValueUnit": 3,
+                "Name": "BoundingBoxDistance"
+              }
+            },
+            {
+              "Obj1Index": 1,
+              "Obj2Index": 0,
+              "Negation": 0,
+              "PropertyCheck": {
+                "$type": "RulesPackage.PropertyCheckBool, RulesPackage",
+                "Value": false,
+                "Operation": 0,
+                "Name": "InFrontOf"
+              }
+            }
+          ],
+          "LogicalExpressions": [],
+          "LogicalOperator": 1
+        }
+      },
+      {
+        "ID": "00000000-0000-0000-0000-000000000000",
+        "Title": "Clearance_Dining_Table",
+        "Description": "Dinning Table 36\u0022 clearance all around",
+        "ErrorLevel": 2,
+        "ExistentialClauses": [
+          {
+            "OccuranceRule": 0,
+            "Characteristic": {
+              "IfcType": 1,
+              "PropertyChecks": [
+                {
+                  "$type": "RulesPackage.PropertyCheckString, RulesPackage",
+                  "Value": "DiningTable",
+                  "Operation": 0,
+                  "Name": "FunctionOfObj"
+                }
+              ]
+            }
+          },
+          {
+            "OccuranceRule": 0,
+            "Characteristic": {
+              "IfcType": 14,
+              "PropertyChecks": []
+            }
+          }
+        ],
+        "LogicalExpression": {
+          "ObjectChecks": [],
+          "RelationChecks": [
+            {
+              "Obj1Index": 0,
+              "Obj2Index": 1,
+              "Negation": 0,
+              "PropertyCheck": {
+                "$type": "RulesPackage.PropertyCheckNum, RulesPackage",
+                "Operation": 0,
+                "Value": 36.0,
+                "ValueInStandardUnit": 0.91439998894929886,
+                "ValueUnit": 3,
+                "Name": "BoundingBoxDistance"
+              }
+            }
+          ],
+          "LogicalExpressions": [],
+          "LogicalOperator": 0
+        }
+      },
+      {
+        "ID": "00000000-0000-0000-0000-000000000000",
+        "Title": "Visual_Balance",
+        "Description": "Center of mass of furnishing should be close to the room centroid",
+        "ErrorLevel": 0,
+        "ExistentialClauses": [
+          {
+            "OccuranceRule": 0,
+            "Characteristic": {
+              "IfcType": 28,
+              "PropertyChecks": []
+            }
+          },
+          {
+            "OccuranceRule": 0,
+            "Characteristic": {
+              "IfcType": 29,
+              "PropertyChecks": []
+            }
+          }
+        ],
+        "LogicalExpression": {
+          "ObjectChecks": [],
+          "RelationChecks": [
+            {
+              "Obj1Index": 0,
+              "Obj2Index": 1,
+              "Negation": 0,
+              "PropertyCheck": {
+                "$type": "RulesPackage.PropertyCheckNum, RulesPackage",
+                "Operation": 2,
+                "Value": 0.0,
+                "ValueInStandardUnit": 0.0,
+                "ValueUnit": 3,
+                "Name": "CenterDistanceXY"
+              }
+            }
+          ],
+          "LogicalExpressions": [],
+          "LogicalOperator": 0
+        }
+      },
+      {
+        "ID": "00000000-0000-0000-0000-000000000000",
+        "Title": "Emphasis_Focal_point",
+        "Description": "Funishing should be angled towards focal point (This case center of room)",
+        "ErrorLevel": 2,
+        "ExistentialClauses": [
+          {
+            "OccuranceRule": 0,
+            "Characteristic": {
+              "IfcType": 1,
+              "PropertyChecks": []
+            }
+          },
+          {
+            "OccuranceRule": 1,
+            "Characteristic": {
+              "IfcType": 29,
+              "PropertyChecks": []
+            }
+          }
+        ],
+        "LogicalExpression": {
+          "ObjectChecks": [],
+          "RelationChecks": [
+            {
+              "Obj1Index": 0,
+              "Obj2Index": 1,
+              "Negation": 0,
+              "PropertyCheck": {
+                "$type": "RulesPackage.PropertyCheckNum, RulesPackage",
+                "Operation": 2,
+                "Value": 0.0,
+                "ValueInStandardUnit": 0.0,
+                "ValueUnit": 5,
+                "Name": "AngleBetweenForwardAndAngleTo"
+              }
+            }
+          ],
+          "LogicalExpressions": [],
+          "LogicalOperator": 0
+        }
+      }
+    ],
+    "Name": "Incomplete Livingroom",
+    "ID": "0e1d3b80-ba84-49e6-8767-f126db241ee6",
+    "Description": ""
+  }
+]
